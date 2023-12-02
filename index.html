@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div id="background">
+        
+            <h1 id="results">Czarny Jacek</h1>
+            <div id="center">
+                <div id="board">
+
+
+
+                    <div id="bot">
+                        <h2>Jacek: <span id="jacek-sum"></span></h2>
+                        <div id="jacek-cards">
+                            <img id="hidden" src="./cards/BACK.png">
+                        </div>
+                    </div>
+
+                    <div id="player">
+                        <h2>Ty: <span id="player-sum"></span></h2>
+                        <div id="player-cards">
+                            <!-- moje karty  -->
+                        </div>
+                        
+                    
+                    </div>
+
+                    
+                        
+                        
+                        <div id="controls">
+                            <button id="hit">Hit</button>
+                            <button id="stay">Stay</button>
+                            <p>
+                                <button id="new_game" onClick="window.location.reload();">Nowa gra</button>
+                            </p>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </body>
+    <script src="script.js"></script> 
+</html>
