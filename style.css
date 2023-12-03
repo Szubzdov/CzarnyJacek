@@ -88,12 +88,26 @@ img{
     width: 100px;
     height: 50px;
     font-size: 20px;
+
+    background-color: black;
+    color: black;
+    border: 3px solid rgb(0, 183, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgb(0, 183, 255);
+    text-shadow: -1px 0 rgb(0, 183, 255), 0 1px rgb(0, 183, 255), 1px 0 rgb(0, 183, 255), 0 -1px rgb(0, 183, 255);
 }
 
 #stay {
     width: 100px;
     height: 50px;
     font-size: 20px;
+
+    background-color: black;
+    color: black;
+    border: 3px solid red;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px red;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
 
 #new_game{
@@ -101,4 +115,11 @@ img{
     width: 200px;
     height: 50px;
     font-size: 20px;
+
+    background-color: black;
+    color: black;
+    border: 3px solid greenyellow;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px greenyellow;
+    text-shadow: -1px 0 greenyellow, 0 1px greenyellow, 1px 0 greenyellow, 0 -1px greenyellow;
 }
