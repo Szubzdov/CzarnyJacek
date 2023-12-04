@@ -168,21 +168,18 @@ function getValue(card) {
     }else{
         if (isNaN(value)) { 
             if (value == "A") {
-                return 11;
+                return 1;
             }
             else if (value == "K") {
-                return 4;
+                return 13;
             }
             else if (value == "Q") {
-                return 3;
+                return 12;
             }
             else if (value == "J") {
-                return 2;
+                return 11;
             }
-            else{
-                return 10;
-
-            }
+            
         }
         return parseInt(value);
     }
@@ -190,7 +187,7 @@ function getValue(card) {
 
 function checkAce(card) {
     if (card[0] == "A") {
-        return 11;
+        return 1;
     }
     return 0;
 }
