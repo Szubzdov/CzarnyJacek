@@ -7,9 +7,11 @@ let playerAceCount = 0;
 let hidden;
 let deck;
 
-let backgrounds = ["bg1.avif","bg2.jpg","bg3.jpg","bg4.jpg"]
+let backgrounds = ["bg1.jpg","bg2.jpg","bg3.jpg","bg4.jpg"]
 
 let canHit = true; 
+
+let jacek = 21;
 
 changeBackgroudImage()
 
@@ -24,7 +26,7 @@ window.onload = function() {
 }
 
 function buildDeck() {
-    let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    let values = ["0","A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
     let types = ["C", "D", "H", "S"];
     deck = [];
 
@@ -95,7 +97,7 @@ function hit() {
     playerSum += getValue(card);
     playerAceCount += checkAce(card);
     document.getElementById("player-cards").append(cardImg);
-    if (reduceAce(playerSum, playerAceCount) > 21) {
+    if (reduceAce(playerSum, playerAceCount) > jacek) {
         canHit = false;
     } 
     
@@ -115,11 +117,11 @@ function stay() {
     document.getElementById("hidden").src = "./cards/" + hidden + ".jpg";
 
     let message = "";
-    if (playerSum > 21) {
+    if (playerSum > jacek ) {
         message = "Przegrałeś!";
         document.getElementById("board").style.background = "rgba(179, 0, 0, 0.5)";
     }
-    else if (jacekSum > 21) {
+    else if (jacekSum > jacek ) {
         message = "Wygrałeś!";
         document.getElementById("board").style.background = "rgba(0, 18, 179, 0.5)";
     }
@@ -152,25 +154,49 @@ function stay() {
 function getValue(card) {
     let data = card.split("-"); // "4-C" -> ["4", "C"]
     let value = data[0];
+    let color = data[1];
 
-    if (isNaN(value)) { //A J Q K
-        if (value == "A") {
-            return 11;
+    if(value=="0"){
+        // if (isNaN(value)) { //A J Q K
+        //     if (value == "A") {
+        //         return -11;
+        //     }
+        //     return -10;
+        // }
+        return parseInt(-1*6);
+
+    }else{
+        if (isNaN(value)) { 
+            if (value == "A") {
+                return 11;
+            }
+            else if (value == "K") {
+                return 4;
+            }
+            else if (value == "Q") {
+                return 3;
+            }
+            else if (value == "J") {
+                return 2;
+            }
+            else{
+                return 10;
+
+            }
         }
-        return 10;
+        return parseInt(value);
     }
-    return parseInt(value);
 }
 
 function checkAce(card) {
     if (card[0] == "A") {
-        return 1;
+        return 11;
     }
     return 0;
 }
 
 function reduceAce(playerSum, playerAceCount) {
-    while (playerSum > 21 && playerAceCount > 0) {
+    while (playerSum > jacek && playerAceCount > 0) {
         playerSum -= 10;
         playerAceCount -= 1;
     }

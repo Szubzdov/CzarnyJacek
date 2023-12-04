@@ -19,7 +19,7 @@ body {
     height: 100vh;
 }
 #background h1{
-    /* From https://css.glass */
+    
     background: rgba(92, 92, 92, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.7px);
@@ -82,7 +82,33 @@ img{
     margin-inline: 1vw;
 }
 
+#helpful{
+    width: 50%;
+    margin: auto;
+    background: rgba(92, 92, 92, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    color: white;
+    font-size:1.5em;
+    border-bottom-left-radius: 50% 70%;
+    border-bottom-right-radius: 50% 70%;
+}
 
+#footer{
+    background: rgba(92, 92, 92, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    color: white;
+    font-size:1.5em;
+    border-radius: 20px;
+    width: 400px;
+    margin: auto;
+}
+#footer a{
+    color: red;
+}
 
 #hit {
     width: 100px;
